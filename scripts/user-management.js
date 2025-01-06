@@ -1,6 +1,6 @@
 // Configuration
 const config = {
-  apiUrl: "http://localhost:5284/api/",
+  apiUrl: "simple-ecommerce-backend-d4cqfhayfrhphag0.southeastasia-01.azurewebsites.net/api/",
 };
 
 let accounts = [];

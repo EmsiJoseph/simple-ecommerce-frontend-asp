@@ -1,5 +1,5 @@
 const ApiService = {
-    baseUrl: 'simple-ecommerce-backend-d4cqfhayfrhphag0.southeastasia-01.azurewebsites.net/api/',
+    baseUrl: 'https://simple-ecommerce-backend-d4cqfhayfrhphag0.southeastasia-01.azurewebsites.net/api/',
 
     async post(endpoint, data) {
         try {

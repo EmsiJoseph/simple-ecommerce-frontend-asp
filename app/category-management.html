@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Hein Admin</title>
+    <link href="../styles/bootstrap.css" rel="stylesheet">
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <!-- Navbar placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Sidebar placeholder -->
+    <div id="sidebar-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 main-content">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Categories</h1>
+        </div>
+        <div class="d-flex gap-2 w-50 mb-3 ms-auto">
+            <input type="text" id="searchCategory" class="form-control w-75" placeholder="Search Categories">
+            <button type="button" class="btn btn-primary w-25" data-bs-toggle="modal" data-bs-target="#addCategoryModal">
+                <i class="bi bi-plus"></i> New Category
+            </button>
+        </div>
+
+        <!-- Category Table -->
+        <div class="table-responsive">
+            <table class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Created At</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="categoryTableBody">
+                    <!-- Table rows will be dynamically populated -->
+                </tbody>
+            </table>
+            <!-- Add pagination after table -->
+            <nav aria-label="Category table navigation" class="mt-4">
+                <ul class="pagination justify-content-center"></ul>
+            </nav>
+        </div>
+    </main>
+
+    <!-- Modal placeholder -->
+    <div id="modal-placeholder"></div>
+
+    <!-- Add form template (hidden) -->
+    <template id="categoryFormTemplate">
+        <form id="categoryForm">
+            <div class="mb-3">
+                <label for="categoryName" class="form-label">Category Name</label>
+                <input type="text" class="form-control" id="categoryName" required>
+            </div>
+            <div class="mb-3">
+                <label for="categoryDescription" class="form-label">Description</label>
+                <textarea class="form-control" id="categoryDescription"></textarea>
+            </div>
+        </form>
+    </template>
+
+    <!-- View template (hidden) -->
+    <template id="categoryViewTemplate">
+        <div class="view-details">
+            <div class="mb-3">
+                <label class="form-label fw-bold">Category Name</label>
+                <p id="viewCategoryName"></p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold">Description</label>
+                <p id="viewCategoryDescription"></p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold">Created At</label>
+                <p id="viewCreatedAt"></p>
+            </div>
+        </div>
+    </template>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/load-components.js"></script>
+    <script src="../scripts/utils.js"></script>
+    <script src="../scripts/api-service.js"></script>
+    <script src="../scripts/table-actions.js"></script>
+    <script src="../scripts/pagination-utils.js"></script>
+    <script src="../scripts/category-management.js"></script>
+</body>
+</html>
